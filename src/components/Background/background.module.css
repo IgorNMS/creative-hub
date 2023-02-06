@@ -13,20 +13,17 @@
     box-sizing: border-box;
     width: 100%;
     position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ToDo Terminar de fazer altreração no container que vai receber o conteudo */
-.container {
+.containerChildren {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 40%;
     z-index: 5;
-    height: 30vh;
-    width: 40vh;
-    background-color: azure;
-    color: azure;
 }
 
 .backgroundContainer {

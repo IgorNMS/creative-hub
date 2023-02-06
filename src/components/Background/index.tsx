@@ -11,8 +11,8 @@ type BackgroundProps = {
 export default function Background(props: BackgroundProps) {
     return (
         <div className={styles.generalContainer}>
-            <div className={styles.container}>
-                <h1>TESTE</h1>
+            <div className={styles.containerChildren}>
+                {props.children}
             </div>
             <div className={styles.backgroundContainer}>
                 <div className={styles.backgroundRow}>
