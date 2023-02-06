@@ -1,0 +1,88 @@
+@keyframes animate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.generalContainer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+}
+
+/* ToDo Terminar de fazer altreração no container que vai receber o conteudo */
+.container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 40%;
+    z-index: 5;
+    height: 30vh;
+    width: 40vh;
+    background-color: azure;
+    color: azure;
+}
+
+.backgroundContainer {
+    height: 50vh;
+    overflow: hidden;
+    animation: animate 4s linear infinite;
+}
+
+/* Para alterar o tamanho do hexagono basta alterar a margem depois alterar o .hexagono */
+.backgroundRow {
+    display: inline-flex;
+    margin-top: -1.45rem;
+    margin-left: -1.70rem;
+}
+
+.backgroundRow:nth-child(even) {
+    margin-left: 0.001rem;
+}
+
+.hexagon {
+    position: relative;
+    width: 3.30rem;
+    height: 3.90rem;
+    background: #111;
+    margin: 0.115rem;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: 1000ms;
+}
+
+.hexagon:hover {
+    transition: 100ms;
+    background: #0f0;
+}
+
+.hexagon:after {
+    content: '';
+    position: absolute;
+    top: 0.25rem;
+    bottom: 0.25rem;
+    left: 0.25rem;
+    right: 0.25rem;
+    background: #111111;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    z-index: 1;
+}
+
+.hexagon:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3.125rem;
+    height: 3.90rem;
+    pointer-events: none;
+    background: rgba(255, 255, 255, 0.02);
+    z-index: 2;
+}
+
+/*USE 16PX PARA REFERENCIA DE CALCULO DO REM*/
