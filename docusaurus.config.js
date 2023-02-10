@@ -7,7 +7,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Creative Hub",
-  tagline: "A site to present my recent projects.",
+  tagline: "Um site para apresentar e documentar meus projetos recentes.",
   favicon: "img/favicon.ico",
 
   // ToDo Set the production url of your site here
@@ -42,6 +42,8 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+          blogSidebarTitle: 'All posts',
+          blogSidebarCount: 5,
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -129,7 +131,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Creative Hub, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

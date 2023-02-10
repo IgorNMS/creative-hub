@@ -14,13 +14,13 @@ function HomepageHeader() {
         <Background>
           <div className="container">
             <h1 className="hero__title">{siteConfig.title}</h1>
-            <p className="hero__subtitle">{siteConfig.tagline}</p>
+            <p className="hero__subtitle">Meus hobbys!</p>
             <div className={styles.buttons}>
               <Link
                   className="button button--secondary button--lg"
                   to="/docs/intro"
               >
-                Docusaurus Tutorial - 5min ⏱️
+                Confira! 👁
               </Link>
             </div>
           </div>
@@ -29,29 +29,12 @@ function HomepageHeader() {
   );
 }
 
-/*
-<header className={clsx("hero hero--primary", styles.heroBanner)}>
-  <div className="container">
-    <h1 className="hero__title">{siteConfig.title}</h1>
-    <p className="hero__subtitle">{siteConfig.tagline}</p>
-    <div className={styles.buttons}>
-      <Link
-          className="button button--secondary button--lg"
-          to="/docs/intro"
-      >
-        Docusaurus Tutorial - 5min ⏱️
-      </Link>
-    </div>
-  </div>
-</header>
-*/
-
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="A site to present my recent projects."
+      title={siteConfig.title}
+      description={siteConfig.tagline}
     >
       <HomepageHeader />
       <main>

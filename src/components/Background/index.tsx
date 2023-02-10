@@ -5,9 +5,6 @@ type BackgroundProps = {
     children: React.ReactNode;
 }
 
-// ToDo Terminar de alterar aki tmb!!
-// Se houver duvidas sobre a implantação de props:
-// consulte o link: https://bobbyhadz.com/blog/react-type-children-has-no-properties-in-common
 export default function Background(props: BackgroundProps) {
     return (
         <div className={styles.generalContainer}>
