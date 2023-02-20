@@ -7,7 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="137203d5-34ba-4ead-b983-c9b10730c8a5" name="Changes" comment="Feat: Preparando para o deploy no Github pages.">
+    <list default="true" id="137203d5-34ba-4ead-b983-c9b10730c8a5" name="Changes" comment="Fix: ajuste do config para deploy.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docusaurus.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docusaurus.config.js" afterDir="false" />
     </list>
@@ -114,7 +114,7 @@
       <workItem from="1676026790809" duration="3767000" />
       <workItem from="1676139470435" duration="9220000" />
       <workItem from="1676481941599" duration="1182000" />
-      <workItem from="1676832478719" duration="1353000" />
+      <workItem from="1676832478719" duration="1972000" />
     </task>
     <task id="LOCAL-00001" summary="Terminando de alterar o cabecalho fixo da pagina inicial.">
       <created>1675655759923</created>
@@ -151,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676908302209</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fix: ajuste do config para deploy.">
+      <created>1676908788937</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1676908788937</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,7 +170,8 @@
     <MESSAGE value="Cabeçalho pronto, com o background interativo." />
     <MESSAGE value="Interatividade do modo claro e escuro corrigidos, deixando o site em portugues e quase colocando o primeiro conteudo." />
     <MESSAGE value="Feat: Preparando para o deploy no Github pages." />
-    <option name="LAST_COMMIT_MESSAGE" value="Feat: Preparando para o deploy no Github pages." />
+    <MESSAGE value="Fix: ajuste do config para deploy." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix: ajuste do config para deploy." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
