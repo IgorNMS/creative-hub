@@ -4,31 +4,28 @@ import styles from './styles.module.css';
 
 type FeatureItem = {
     title: string;
-    Svg: React.ComponentType<React.ComponentProps<'svg'>>;
     description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
     {
         title: 'Um site criado para apresentação dos meus hobbys e projetos',
-        Svg: require('@site/static/img/Bem-vindo.svg').default,
         description: (
             <>
                 Site criado usando o Docusaurus, para apresentação de alguns projetos e
                 hobbys que faço no meu tempo livre.
+                <br/>
+                Tem alguns posts descrevendo os projetos e o do problema que ele resolve na aba blogs.
+                <br/>
                 Sinta se a vontade para explorar e contribuir!
             </>
         ),
     },
 ];
 
-
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, description}: FeatureItem) {
     return (
         <div className={clsx('col col--10')}>
-            <div className="text--center">
-                <Svg className={styles.featureSvg} role="img"/>
-            </div>
             <div className="text--center padding-horiz--md">
                 <h3>{title}</h3>
                 <p>{description}</p>

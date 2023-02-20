@@ -1,6 +1,4 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
-
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
@@ -9,18 +7,11 @@ const config = {
   title: "Creative Hub",
   tagline: "Um site para apresentar e documentar meus projetos recentes.",
   favicon: "img/favicon.ico",
-  url: "https://example.com",
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  url: "https://creative-hub.vercel.app/",
   baseUrl: "/",
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
   organizationName: "IgorNMS",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  // Even if you don't use internalization, yo"u can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "pt-br",
     locales: ["en", "pt-br"],
@@ -75,6 +66,7 @@ const config = {
           },
         ],
       },
+
       footer: {
         style: "dark",
         links: [
@@ -124,6 +116,7 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Creative Hub, Inc. Construido com Docusaurus.`,
       },
+
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,

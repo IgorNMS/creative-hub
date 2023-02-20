@@ -7,9 +7,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="137203d5-34ba-4ead-b983-c9b10730c8a5" name="Changes" comment="Fix: ajuste do config para deploy.">
+    <list default="true" id="137203d5-34ba-4ead-b983-c9b10730c8a5" name="Changes" comment="Fix: ajuste do config para deploy vercel.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docusaurus.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docusaurus.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomepageFeatures/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomepageFeatures/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/Bem-vindo.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +55,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Projects/SpecialCondition/creative-hub&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/SpecialCondition/creative-hub/blog&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -63,6 +67,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\SpecialCondition\creative-hub\blog" />
+    </key>
+  </component>
   <component name="RunManager" selected="npm.start">
     <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -114,7 +123,8 @@
       <workItem from="1676026790809" duration="3767000" />
       <workItem from="1676139470435" duration="9220000" />
       <workItem from="1676481941599" duration="1182000" />
-      <workItem from="1676832478719" duration="1972000" />
+      <workItem from="1676832478719" duration="6060000" />
+      <workItem from="1676921520144" duration="1193000" />
     </task>
     <task id="LOCAL-00001" summary="Terminando de alterar o cabecalho fixo da pagina inicial.">
       <created>1675655759923</created>
@@ -158,7 +168,28 @@
       <option name="project" value="LOCAL" />
       <updated>1676908788937</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fix: ajuste do config para deploy vercel.">
+      <created>1676909412387</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1676909412387</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fix: ajuste do config para deploy vercel.">
+      <created>1676909557742</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1676909557742</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fix: ajuste do config para deploy vercel.">
+      <created>1676910052470</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1676910052470</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,7 +202,8 @@
     <MESSAGE value="Interatividade do modo claro e escuro corrigidos, deixando o site em portugues e quase colocando o primeiro conteudo." />
     <MESSAGE value="Feat: Preparando para o deploy no Github pages." />
     <MESSAGE value="Fix: ajuste do config para deploy." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix: ajuste do config para deploy." />
+    <MESSAGE value="Fix: ajuste do config para deploy vercel." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix: ajuste do config para deploy vercel." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
