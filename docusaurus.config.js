@@ -9,9 +9,7 @@ const config = {
   title: "Creative Hub",
   tagline: "Um site para apresentar e documentar meus projetos recentes.",
   favicon: "img/favicon.ico",
-
-  // ToDo Set the production url of your site here
-  url: "https://your-docusaurus-test-site.com",
+  url: "https://igornms.github.io/creative-hub/",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/creative-hub/",
