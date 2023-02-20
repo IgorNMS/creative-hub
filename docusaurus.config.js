@@ -19,8 +19,6 @@ const config = {
   projectName: "creative-hub",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  trailingSlash: false,
-  deploymentBranch: "master",
   // Even if you don't use internalization, yo"u can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
