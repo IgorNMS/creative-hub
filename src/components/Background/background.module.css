@@ -20,7 +20,6 @@
     align-items: center;
 }
 
-/* ToDo Terminar de fazer altreração no container que vai receber o conteudo */
 .containerChildren {
     position: absolute;
     z-index: 5;

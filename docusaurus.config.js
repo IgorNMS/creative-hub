@@ -14,12 +14,12 @@ const config = {
   url: "https://your-docusaurus-test-site.com",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/",
+  baseUrl: "/creative-hub/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "IgorNMS", // Todo Usually your GitHub org/user name.
-  projectName: "Creative Hub my blog", // Todo Usually your repo name.
+  organizationName: "IgorNMS",
+  projectName: "Creative Hub my blog",
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -42,8 +42,6 @@ const config = {
         },
         blog: {
           showReadingTime: true,
-          blogSidebarTitle: 'All posts',
-          blogSidebarCount: 5,
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -55,15 +53,14 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Todo
-      // Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
+      image: "img/creativeHub.svg",
       navbar: {
         title: "Creative Hub",
         logo: {
           alt: "Logo",
-          // Todo change logo
-          src: "img/logo.svg",
+          src: "img/logo.webp",
+          width: "32px",
+          height: "50px"
         },
         items: [
           {
@@ -131,7 +128,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Creative Hub, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Creative Hub, Inc. Construido com Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
