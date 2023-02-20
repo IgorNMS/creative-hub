@@ -9,14 +9,13 @@ const config = {
   title: "Creative Hub",
   tagline: "Um site para apresentar e documentar meus projetos recentes.",
   favicon: "img/favicon.ico",
-  url: "https://igornms.github.io/creative-hub/",
+  url: "https://example.com",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "IgorNMS",
-  projectName: "creative-hub",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   // Even if you don't use internalization, yo"u can use this field to set useful
