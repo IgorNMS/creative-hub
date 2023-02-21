@@ -1,0 +1,784 @@
+---
+title: Referencia rapida MySQL
+description: Alguns comandos basicos de MySql.
+---
+
+# Referencia rapida de MySQL.
+
+### TIPOS DE DADOS DE TEXTO
+
+- CHAR(x) aceita textos com ate 255 caracteres.
+- VARCHAR(x) aceita textos com ate 65535 caracteres.
+- TINYTEXT texto com ate 255 caracteres.
+- MEDIUMTEXT texto com ate 16777215 caracteres.
+
+Obs: CHAR e VARCHAR aceitam numero e caracteres especiais.
+
+---
+
+### TIPOS DE DADOS NUMERICOS
+
+- BIT(x) 1 a 64 numeros.
+- TINYINT(x) 1 a 255 numeros.
+- BOOL 0 e falso e demais valores verdadeiros.
+- INT(x) valores entre -2147483648 a 2147483647
+
+---
+
+### TIPOS DE DATA
+
+- DATE Aceita uma data no formato yyyy-mm-dd
+- DATETIME Aceita uma data com horario no formato YYYY-MM-DD hh:mm:ss
+- TIMESTAMP Aceita uma data no formato de DATETIME, porem apenas entre os anos 1970 a 2038
+
+Obs: Datas tambem são inseridas entre aspas
+
+---
+
+### MANIPULAÇÃO DE BANCO DE DADOS E TABELAS
+
+- CREATE DATABASE <NOME_BANCO_DE_DADOS> = CRIA O BANCO DE DADOS;
+- USE <NOME_BANCO_DE_DADOS> = SELECIONA O BANCO PARA SER USADO;
+- CREATE TABLE <NOME_TABELA> = CRIA UMA TABELA;
+- DROP TABLE <NOME_TABELA> = DELETA UMA TABELA;
+- DROP DATABASE <NOME_BANCO_DE_DADOS> = DELETA BANCO DE DADOS;
+
+---
+
+### ALTERAÇÃO DE TABELAS
+```sql
+- ALTER TABLE <TABELA> ADD COLUMN <NOME-COLUNA> <TIPO-DE-COLUNA>; = Adiciona uma nova coluna a tabela.
+- ALTER TABLE <TABELA> MODIFY COLUMN <NOME-COLUNA> <NOVO-TIPO-DE-COLUNA>; = Altera uma coluna previamente criada.
+- ALTER TABLE <TABELA> DROP COLUMN <NOME-COLUNA>; = Deleta uma coluna previamente criada.
+```
+---
+
+### CRUD
+
+As operações CRUD se referem a Create (criar), Read (ler), Update (atualizar) e Delete (deletar), são as principais operações em banco de dados.
+
+- Para criar algo na tabela utilizamos o comando INSERT.
+- Para ler usamos o comando SELECT.
+- Para atualizar utilizamos o comando UPDATE
+- Para deletar usamos o comando DELETE
+
+---
+
+### INSERÇÃO DE DADOS NAS TABELAS
+```sql
+- INSERT INTO <TABELA> (<COLUNA-1>, <COLUNA-2>…) VALUES (<VALORES-1>, <VALORES-2>);
+```
+Obs: os valores precisam corresponder a ordem das colunas e os valores de texto são inseridos entre aspas.
+
+---
+
+### LENDO DE UMA TABELA
+```sql
+- SELECT <COLUNA-1, COLUNA-2…> FROM <TABELA> WHERE <COLUNA-N> = <VALOR>;
+```
+Geralmente nos usamos o * (ALL) para o SELECT apresentar todas as colunas de alguma tabela.
+
+A clausula WHERE e usada para filtrar os resultados de alguma query, dada a condicional na query.
+
+---
+
+### ATUALIZANDO O REGISTRO DE UMA TABELA
+```sql
+- UPDATE <TABELA> SET <COLUNA-1 = VALOR-1, COLUNA-2 = VALOR-2> WHERE <CONDIÇÃO>;
+```
+Obs: Sempre usar o WHERE!
+
+---
+
+### DELETANDO UM REGISTRO DA TABELA
+```sql
+- DELETE FROM <TABELA> WHERE <CONDIÇÃO>;
+```
+Obs: Sempre usar o WHERE!
+
+---
+
+### FILTROS AVANÇADOS DE SELECT
+
+Operadores:
+
+- Comparação: >(maior que), <(menor que), >=(maior ou igual que), <=(menor ou igual que),    =(igual) usados para filtrar dados com base em comparações.
+- BETWEEN: Seleção por intervalo.
+- LIKE: Seleção por meio de algum padrão, Ex: Select * from exemplo like “exemplo”;.
+- IN: Seleção entre conjunto de valores especificos.
+
+---
+
+### CLAUSULA WHERE
+
+WHERE será utilizado junto com os operadores na seção anterior, serve para filtrar dados.
+
+Exemplos:
+```sql
+- SELECT * FROM TABELA_EXEMPLO WHERE COLUNA_EXEMPLO = “EXEMPLO”;
+- SELECT * FROM TABELA_EXEMPLO WHERE COLUNA_EXEMPLO BETWEEN 30 AND 100;
+- SELECT * FROM TABELA_EXEMPLO WHERE COLUNA_EXEMPLO LIKE ‘EXEMPLO’;
+- SELECT * FROM TABELA_EXEMPLO WHERE COLUNA_EXEMPLO IN (’EXEMPLO1’,‘EXEMPLO2’);
+```
+---
+
+### DISTINCT
+
+O DISTINCT, irá selecionar apenas valores distintos, não repetindo o valor da coluna definida.
+
+Exemplo:
+```sql
+SELECT DISTINCT <COLUNA> FROM <TABELA>;
+```
+---
+
+### OPERADORES LOGICOS
+
+- AND: Recebe duas condições, so volta resultados que atendem as duas.
+- OR: Recebe duas condições, volta os resultados que atendem pelo menos uma.
+- NOT: Invertemos uma clausula.
+
+Exemplos:
+```sql
+- WHERE <COLUNA-1> = “EXEMPLO-1” AND <COLUNA-1> = “EXEMPLO-2”;
+- WHERE <COLUNA-1> = “EXEMPLO-1” OR<COLUNA-1> = “EXEMPLO-2”;
+- WHERE IS NOT NULL;
+```
+---
+
+### ORDER BY
+
+- ASC ordena de forma ascendente.
+- DESC ordena de forma descendente.
+
+Exemplo:
+```sql
+- ORDER BY <COLUNA-1> ASC;
+```
+---
+
+### LIMIT
+
+A instrução LIMIT serve para limitar os resultados de uma busca.
+
+Ex:
+```sql
+- SELECT * FROM <TABELA-1> LIMIT 15;
+```
+---
+
+### FUNÇÕES SQL INTRO
+
+Funções são blocos de codigo reaproveitaveis.
+
+Existem diversas no SQL para facilitar a consulta.
+
+Ex:
+
+A função MAX que retorna o valor de uma determinada coluna;
+
+O mesmo resultado da função MAX pode ser obtido por:
+
+- SELECT coluna FROM tabela ORDER BY coluna DESC LIMIT 1;
+
+---
+
+### FUNÇÃO MIN
+
+Retorna o valor minimo de uma coluna especifica.
+
+Ex:
+```sql
+SELECT MIN(<COLUNA>) FROM <TABELA>;
+```
+---
+
+### FUNÇÃO MAX
+
+Retorna o maior valor de uma coluna especifica.
+
+EX:
+```sql
+- SELECT MAX(<COLUNA>) FROM <TABELA>;
+```
+---
+
+### FUNÇÃO COUNT
+
+O COUNT retorna o numero de valores de uma certa coluna.
+
+Pode ser utilizado com WHERE.
+
+Ex:
+```sql
+- SELECT COUNT(*) FROM <TABELA> WHERE <CONDIÇÃO>;
+```
+---
+
+### FUNÇÃO AVG
+
+Serve para retornar a media de uma coluna.
+
+Ex:
+```sql
+- SELECT AVG(<COLUNA>) FROM <TABELA>;
+```
+---
+
+### FUNÇÃO SUM
+
+E a função que soma todos os valores numericos de uma coluna.
+
+Pode se usar o WHERE.
+
+Ex:
+
+- SELECT SUM(salary) FROM salaries;
+
+---
+
+### OPERADOR LIKE
+
+Sempre utilizado junto ao WHERE, pode se utilizar o % como “coringa”.
+
+EX
+
+- SELECT * FROM employees WHERE first_name LIKE ‘%gor%’
+
+Dessa forma teremos a seleção de todos os primeiros nomes que contem gor, não impórta se no inicio ou no fim.
+
+---
+
+### OPERADOR IN
+
+O IN ira fazer uma busca por um conjunto de valores.
+
+Ex:
+
+- SELECT * FROM dept_emp WHERE dept_no IN (’d004’, ‘d005’, ‘d006’);
+
+desta forma selecionamos os registros apenas dos departamentos d004, d005, d006.
+
+---
+
+### OPERADOR BETWEEN
+
+Serve para buscar registros que estão em uma faixa de valores.
+
+Ex:
+
+- SELECT * FROM TABELA_EXEMPLO WHERE COLUNA_EXEMPLO BETWEEN 30 AND 100
+
+neste exemplo estamos retornando valores de 30 ao 100.
+
+---
+
+### ALIAS
+
+Alias e um “apelido” que pode se dar a uma coluna.
+
+Ex:
+
+SELECT SUM(salary) AS soma_salario FROM salaries;
+
+O AS e utilizado para determinar como a coluna deve ser chamada.
+
+---
+
+### CONSTRAINTS
+
+São regras que determinam como campos serão definidos, geralmente são adicionadas na criação da tabela, mas tambem podem ser alteradas.
+
+Exemplos:
+
+NOT NULL onde a coluna não pode ter registros nulos.
+
+Constraint UNIQUE garante que uma tabela não tenha registros repetidos.
+
+PRIMARY KEY so pode sert adicionada a uma coluna, o valor deve ser unico e não pode ser nulo, é usado como identificador unico de registros na tabela.
+
+AUTO INCREMENT serve para adicionar automaticamente mais um registro na tabela e muito usado junto com a constraint PRIMARY KEY, pois não precisamos nos preocupar em fazer o INSERT nessa coluna, EX:
+
+| AUTO_EX | PRODUCT |
+| --- | --- |
+| 1000 | EX_PRODUCT |
+| 1001 | Ele adiciona automaticamente mais um na coluna quando um novo produto e inserido |
+
+FOREIGN KEY e uma relação de uma tabela a outra, e usado para relacionarmos duas tabelas distintas EX: relacionar um usuario a um endereço.
+
+INDEX adiciona um indice a coluna, oq a faz se tornar mais rapida, uma chave primaria tambem e considera como um indice pelo MySQL.
+
+Ex: CREATE INDEX index_name ON people(name);
+
+---
+
+### JOINS
+
+São consultas que envolvem duas ou mais tabelas, as tabelas geralmente devem ter relação entre si, são varios os tipos de JOIN o LEFT JOIN, RIGHT JOIN e INNER JOIN.
+
+O INNER JOIN vai resultar nas colunas que fazem relação entre as tabelas, utilizamos a instrução ON para determinar as colunas que precisam ser iguais.
+
+EX: SELECT employees.first_name, salaries.salary
+
+FROM employees
+
+INNER JOIN salaries
+
+ON employees.emp_id = salaries.emp_id;
+
+O LEFT JOIN retorna todos os dados da tabela esquerda e apenas os necessarios da esquerda, tambem conhecido como LEFT OUTER JOIN, havera dados retornados da tabela esquerda mesmo se a mesma não corresponder com a outra.
+
+Os dados da esquerda podem vim nulos.
+
+EX: SELECT pessoas.nome, endereço.*
+
+FROM pessoas
+
+LEFT JOIN enderecos
+
+ON pessoas.pes_id = enderecos.pessoa_id
+
+O RIGHT JOIN retorna todos os dados da tabela da direita, basicamente a mesma coisa que o LEFT JOIN, so que na tabela da direita
+
+EX: SELECT pessoas.nome, endereço.*
+
+FROM pessoas
+
+LEFT JOIN enderecos
+
+ON pessoas.pes_id = enderecos.pessoa_id
+
+---
+
+### UNION
+
+Operador UNION, e utilizado para combinar o resultado de dois ou mais SELECTs.
+
+As colunas precisam ter o mesmo nome.
+
+Os resultados serão agregados em uma coluna só, mas podemos selecionar mais de uma coluna por query.
+
+Não traz resultado duplicados.
+
+Ex: SELECT dept_no FROM departments
+
+UNION SELECT dept_no FROM dept_emp;
+
+---
+
+### UNION ALL
+
+É utilizado para combinar o resultado de dois ou mais SELECTS, as colunas precisam ter o mesmo nome, com resultados agregados a uma coluna só, porém podemos selecionar mais de uma coluna por vez e pode trazer resultados duplicados.
+
+Ex: SELECT dept_no FROM departments
+
+UNION ALL SELECT dept_no FROM dept_emp;
+
+---
+
+### GROUP BY
+
+Serve para agruparmos colunas e checarmos quantidades de determinados elementos.
+
+Exemplo, quantos programadores ou designers existem em um banco de funcionarios, nos agrupamos ambos e somamos para obtermos o resultado.
+
+Ex: SELECT gender, COUNT(gender)
+
+FROM employees
+
+GROUP BY gender;
+
+---
+
+### HAVING
+
+O HAVING e semelhante ao WHERE, porém podemos utilizar eles com funções agregadas (SUM, AVG, GROUP BY).
+
+Ex: SELECT hire_date, COUNT(hire_date)
+
+FROM employees
+
+GROUP BY hire_date
+
+HAVING COUNT(hire_date) > 80
+
+ORDER BY COUNT(hire_date) DESC;
+
+---
+
+### SUBQUERY’s
+
+Uma subquery é uma query dentro de outra query, teremos dois ou mais SELECT’s, funciona de forma parecida com o JOIN mas as vezes precisamos de algo muito especifico, então uma subconsulta pode se tornar mais pratico dop que um JOIN
+
+Ex:
+
+```sql
+SELECT first_name, (
+	SELECT SUM(salary)
+	FROM salaries
+	WHERE employees.emp_no = salaries.emp_no
+) AS soma_salario
+FROM employees;
+```
+
+---
+
+### EXISTS
+
+O EXISTS como o nome sujere, serve para checar se existe algum registro em alguma subquery, desta maneira podemos retornar resultados, apenas se existir algum de fato.
+
+Ex:
+
+```sql
+SELECT emp_no, first_name, last_name, (
+	SELECT SUM(salary)
+	FROM salaries
+	WHERE employees.emp_no = salaries.emp_no
+) AS soma_salario
+FROM employees
+WHERE EXISTS (
+	SELECT salary
+	FROM salaries
+	WHERE employees.emp_no = salaries.emp_no
+	HAVING SUM(salary) > 2000000
+);
+```
+
+---
+
+### ANY
+
+O ANY irá retornar os resultados que recebem TRUE da subquery, por meio de uma subquery receberemos apenas os resultados que condizem a uma condição, sendo assim se queremos os nomes de quem ganha mais de 150000, so receberemos nomes se alguem ganhar mais que 150000.
+
+Ex:
+
+```sql
+SELECT first_name
+FROM employees
+WHERE emp_no = ANY (
+	SELECT emp_no
+	FROM salaries
+	WHERE salary > 150000
+);
+```
+
+E UMA QUERY PESADA USAR SOMENTE EM ULTIMO CASO!!!
+
+---
+
+### COMENTARIOS
+
+Para fazer comentarios apenas use o “--” ou “/* */”.
+
+---
+
+### CHAR_LENGTH
+
+A função CHAR_LENGHT retorna o numero de caracteres de uma string de uma determinada coluna.
+
+EX: CHAR_LENGTH(<nome_da_coluna>)
+
+---
+
+### CONCAT
+
+A função CONCAT serve para unir duas ou mais strings.
+
+Ex: CONCAT(”teste”, “teste”, “teste”);
+
+---
+
+### CONCAT_WS
+
+Serve para unir duas ou mais strings, porém com um separador em comum.
+
+Ex: CONCAT_WS(”-”, “teste”, “teste”)
+
+resultado = “teste-teste”;
+
+---
+
+### FORMAT
+
+A função FORMAT irá formatar um numero com um numero de casas determinado por argumentos, em alguns casos ele ira arrendondar o numero.
+
+Ex: FORMAT(numero, 2)
+
+Formata o numero com apenas duas casas decimais.
+
+---
+
+### INSTR
+
+Retorna a posição do caractere ou string que estamos buscando em uma outra string.
+
+Ex:
+```sql
+INSTR(<string>, ‘a’)
+```
+---
+
+### LCASE
+
+Retorna todo o texto para lower case.
+
+Ex:
+```sql
+LCASE(”ALGUM TEXTO”);
+```
+---
+
+### LEFT
+
+A função LEFT extrai uma quantidade de caracteres de uma string, a extração acontece da esquerda para a direita.
+
+Ex:
+```sql
+LEFT(<string>, 5)
+```
+---
+
+### REPLACE
+
+A função REPLACE troca alguma parte da string por outra enviada por parametro.
+
+Ex:
+```sql
+REPLACE(<texto>, <antigo>, <novo>)
+```
+---
+
+### RIGHT
+
+A função RIGHT extrai caracteres da direita para a esquerda, funciona de forma semelhante ao LEFT.
+
+Ex:
+```sql
+RIGHT(<texto>, 10)
+```
+---
+
+### SUBSTR
+
+Extrai uma string a partir de dois indices, inicio e fim.
+
+Ex:
+```sql
+SUBSTR(<texto>, <inicio>, <fim>)
+```
+---
+
+### UCASE
+
+Deixa todas as letras maiusculas.
+
+Ex:
+```sql
+UCASE(<string>)
+```
+---
+
+### CEIL
+
+A função CEIL arredonda numeros com casas decimais para cima, ou seja, 25.8 se torna 26.
+
+Ex:
+```sql
+CEIL(<numero_decimal>)
+```
+---
+
+### COUNT
+
+Conta o numero de registros de uma coluna.
+
+Ex:
+```sql
+COUNT(<coluna>)
+```
+---
+
+### FLOOR
+
+Arredonda para baixo, o oposto do CEIL.
+
+Ex:
+```sql
+FLOOR(<numero>)
+```
+---
+
+### MAX
+
+Retorna o valor maximo da coluna.
+Ex:
+```sql
+MAX(<coluna>)
+```
+---
+
+### MIN
+
+Retorna o valor minimo da coluna.
+
+Ex:
+```sql
+MIN(<coluna>)
+```
+---
+
+### SUM
+
+Soma os registros numericos de uma coluna.
+
+Ex:
+```sql
+SUM(<coluna>)
+```
+---
+
+### ADDDATE
+
+A função adiciona ou remove uma quantidade de horas, dias, meses ou anos a uma data
+
+Ex:
+```sql
+ADDDATE(<coluna>, <data>)
+```
+---
+
+### DATEDIFF
+
+Calcula a diferença de duas datas, o valor e retornado em dias.
+
+Ex:
+```sql
+DATEDIFF(<data1>, <data2>)
+```
+---
+
+### ADDTIME
+
+Adiciona ou remove um tempo a uma data, utilizamos o formato yyyy-mm-dd hh:mm:ss.
+
+Ex:
+```sql
+ADDTIME(<coluna>, <tempo>);
+```
+---
+
+### DATE_FORMAT
+
+Formata data com um padrão indicado.
+
+Ex:
+```sql
+DATE_FORMAT(<data>, <formato>)
+```
+Ao utilizarmos o %Y, receberemos o ano completo, por exemplo.
+
+---
+
+### DAY
+
+A função DAY retorna o dia da data utilizada na função.
+
+Ex:
+```sql
+DAY(<data>)
+```
+---
+
+### DAYOFWEEK
+
+A função DAYOFWEEK retorna o dia da semana de uma determinada data.
+
+Ex:
+```sql
+DAYOFWEEK(<data>)
+```
+O domingo se inicia com 1.
+
+---
+
+### DAYOFYEAR
+
+Retorna o dia do ano de uma determinada data.
+
+Ex:
+```sql
+DAYOFYEAR(<data>)
+```
+O retorno e de 1 a 395
+
+---
+
+### WEEKOFYEAR
+
+Retorna a semana do ano.
+
+Ex:
+```sql
+WEEKOFYEAR(<data>)
+```
+O retorno e de 1 a 42.
+
+---
+
+### MONTH
+
+Retorna o mes da data utilizada pela função.
+
+Ex:
+```sql
+MONTH(<data>)
+```
+Retorno de 1 a 12
+
+---
+
+### YEAR
+
+Retorna o ano da data utilizada pela função.
+
+Ex:
+```sql
+YEAR(<data>)
+```
+---
+
+### RELACIONAMENTO DE TABELAS
+
+Os links que fazem a relação entre as tabelas são as Foreign Keys (FKs).
+
+Os tipo de relacionamento mais comuns são, o um para um, um para muitos e muitos para muitos.
+
+---
+
+### UM PARA UM
+
+Ex: Estudante x Informações de Contato;
+
+Cada estudante so pode ter uma informação de contato e a informação de contato e apenas de um estudante.
+
+Estrutura das duas tabelas ligadas por uma FK.
+
+---
+
+### UM PARA MUITOS
+
+Ex: Cliente x Pedidos;
+
+Um cliente pode ter varios pedidos porém um pedido e de um unico cliente.
+
+---
+
+### MUITO PARA MUITOS
+
+Ex: Alunos x Materias;
+
+Um aluno pode esta fazendo varias materias diferentes e uma materia pode ter varios alunos matriculados.
+
+Normalmente e usado uma pivot table, onde esta serve apenas para conter as relações entre as tabelas.
+
+---

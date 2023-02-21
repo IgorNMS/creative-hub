@@ -1,0 +1,42 @@
+# Whonix Gateway com Kali
+
+### Primeiro passo e fazer downloads do virtual box e suas imagens:
+
+- Virtual Box: [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)
+
+- Kali Linux: [https://www.kali.org/get-kali/#kali-virtual-machines](https://www.kali.org/get-kali/#kali-virtual-machines)
+
+- Whonix: [https://www.whonix.org/wiki/VirtualBox](https://www.whonix.org/wiki/VirtualBox)
+
+
+---
+
+### Configuração do ambiente.
+
+Na parte de configuração de rede do Kali (ou outro OS) certifique se de que o kali esta conectando na rede interna do Whonix Gateway.
+
+Segue print de exemplo:
+
+![image_2022-10-30_145152797.png](img/image_2022-10-30_145152797.png)
+
+Após primeiro boot no Whonix Gataway, atualização de sistema e etc, fazer boot no Kali, para configurarmos a conexão com o Gataway.
+
+![image_2022-10-30_152241367.png](img/image_2022-10-30_152241367.png)
+
+Em IPV4 Settings na opção Method, marcar o methodo manual!
+
+![image_2022-10-30_152415047.png](img/image_2022-10-30_152415047.png)
+
+Adicionar um IP manual na configuração, o endereço de IP exato pode ser obtido na VM do whonix workstation.
+
+![image_2022-10-30_153046322.png](img/image_2022-10-30_153046322.png)
+
+A rede interna do Whonix 10.152.152.xx
+
+Exemplo de configuração:
+
+![Untitled](img/Untitled.png)
+
+- O Whonix Gateway pode ser usado com qualquer sistema operacional rodando na VM, o Kali linux so foi usado de exemplo.
+
+### E importante deixar a VM do Whonix Gateway executando para deixar o IP do kali anonimo!

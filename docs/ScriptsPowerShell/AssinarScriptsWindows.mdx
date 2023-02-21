@@ -1,0 +1,81 @@
+# Sign scripts Windows
+
+Documentação resumindo como e o processo de assinatura de scripts windows.
+
+Como geralmente o script e criado por mim (Desenvolvedor) um certificado pessoal para desenvolvimento ja basta pra atender meus requisitos diários e como so irei usar esse certificado na minha maquina, isso é mais que suficiente.
+
+Solução criada para o problema de politicas de execução do windows, quando o script falta uma assinatura ou com a assinatura errada.
+
+Essa documentação foi escrita baseada nesse tutorial: [https://adamtheautomator.com/how-to-sign-powershell-script/](https://adamtheautomator.com/how-to-sign-powershell-script/)
+
+### Criando um certificado auto assinado.
+
+Abra o PowerShell como administrador e execute o seguinte comando:
+
+```powershell
+# Generate a self-signed Authenticode certificate in the local computer's personal certificate store.
+ $authenticode = New-SelfSignedCertificate -Subject "ATA Authenticode" -CertStoreLocation Cert:\LocalMachine\My -Type CodeSigningCert
+```
+
+Agora para fazer o computador confiar no certificado recém criado, adicione o nas lojas de certificado “Trusted Root Certification Authority” e na “Trusted Publishers” com o seguinte código:
+
+```powershell
+# Add the self-signed Authenticode certificate to the computer's root certificate store.
+## Create an object to represent the LocalMachine\Root certificate store.
+ $rootStore = [System.Security.Cryptography.X509Certificates.X509Store]::new("Root","LocalMachine")
+## Open the root certificate store for reading and writing.
+ $rootStore.Open("ReadWrite")
+## Add the certificate stored in the $authenticode variable.
+ $rootStore.Add($authenticode)
+## Close the root certificate store.
+ $rootStore.Close()
+
+# Add the self-signed Authenticode certificate to the computer's trusted publishers certificate store.
+## Create an object to represent the LocalMachine\TrustedPublisher certificate store.
+ $publisherStore = [System.Security.Cryptography.X509Certificates.X509Store]::new("TrustedPublisher","LocalMachine")
+## Open the TrustedPublisher certificate store for reading and writing.
+ $publisherStore.Open("ReadWrite")
+## Add the certificate stored in the $authenticode variable.
+ $publisherStore.Add($authenticode)
+## Close the TrustedPublisher certificate store.
+ $publisherStore.Close()
+```
+
+Existem 3 razões para adicionar certificados auto assinados nas 3 lojas.
+
+- O certificado que você criou na loja pessoal e o que você irá usar como assinatura do código.
+- Copiar o mesmo certificado para a loja “Trusted Publishers” garante que seu computador irá confiar no editor que assinou o script.
+- E por ultimo adicionando na loja “Trusted Root Certification Authorities” garante que seu computador confie no certificado criado nas lojas “Personal”(pessoal do usuario) e na “Trusted Publishers”.
+
+Para confirmar que seu certificado esta correto nas lojas rode o comando abaixo.
+
+```powershell
+# Confirm if the self-signed Authenticode certificate exists in the computer's Personal certificate store
+ Get-ChildItem Cert:\LocalMachine\My | Where-Object {$_.Subject -eq "CN=ATA Authenticode"}
+# Confirm if the self-signed Authenticode certificate exists in the computer's Root certificate store
+ Get-ChildItem Cert:\LocalMachine\Root | Where-Object {$_.Subject -eq "CN=ATA Authenticode"}
+# Confirm if the self-signed Authenticode certificate exists in the computer's Trusted Publishers certificate store
+ Get-ChildItem Cert:\LocalMachine\TrustedPublisher | Where-Object {$_.Subject -eq "CN=ATA Authenticode"}
+```
+
+---
+
+### Assinando scripts .ps1
+
+Agora que o certificado foi criado e instalado nas 3 lojas de assinatura, tudo esta pronto.
+
+Para assinar um script PowerShell basta rodar os dois comando abaixo, o primeirto comando pega o certificado da loja de certificados local, o segundo assina de fato o script.
+
+```powershell
+# Get the code-signing certificate from the local computer's certificate store with the name *ATA Authenticode* and store it to the $codeCertificate variable.
+$codeCertificate = Get-ChildItem Cert:\LocalMachine\My | Where-Object {$_.Subject -eq "CN=ATA Authenticode"}
+
+# Sign the PowerShell script
+# PARAMETERS:
+# FilePath - Specifies the file path of the PowerShell script to sign, eg. C:\ATA\myscript.ps1.
+# Certificate - Specifies the certificate to use when signing the script.
+# TimeStampServer - Specifies the trusted timestamp server that adds a timestamp to your script's digital signature. Adding a timestamp ensures that your code will not expire when the signing certificate expires.
+Set-AuthenticodeSignature -FilePath C:\ATA\myscript.ps1 -Certificate $codeCertificate -TimeStampServer *<http://timestamp.digicert.com>*
+```
+
+A maioria dos certificados tem um servidor de marcação de tempo e você pode encontra los nos sites de provedoras de certificado, como por exemplo o Comodo: [http://timestamp.comodoca.com](http://timestamp.comodoca.com/) ou o DigiCert: [http://timestamp.digicert.com](http://timestamp.digicert.com/).

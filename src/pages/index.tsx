@@ -15,7 +15,7 @@ function HomepageHeader() {
           <div className="container">
             <h1 className="hero__title">{siteConfig.title}</h1>
             <p className="hero__subtitle">
-              Confira meus projetos!
+              Confira meus projetos.
             </p>
             <div className={styles.buttons}>
               <Link

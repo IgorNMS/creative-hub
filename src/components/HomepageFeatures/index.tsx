@@ -9,13 +9,15 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
     {
-        title: 'Um site criado para apresentação dos meus hobbys e projetos',
+        title: '',
         description: (
             <>
                 Site criado usando o Docusaurus, para apresentação de alguns projetos e
                 hobbys que faço no meu tempo livre.
                 <br/>
                 Tem alguns posts descrevendo os projetos e o do problema que ele resolve na aba blogs.
+                <br/>
+                Na aba docs tem algumas documentações e tutoriais.
                 <br/>
                 Sinta se a vontade para explorar e contribuir!
             </>
