@@ -14,7 +14,7 @@ const config = {
   onBrokenMarkdownLinks: "warn",
   i18n: {
     defaultLocale: "pt-br",
-    locales: ["en", "pt-br"],
+    locales: ["pt-br"],
   },
 
   presets: [
@@ -38,7 +38,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: "img/creativeHub.svg",
+      image: "img/creativeHub.webp",
       navbar: {
         title: "Creative Hub",
         logo: {
@@ -52,21 +52,20 @@ const config = {
             type: "doc",
             docId: "intro",
             position: "left",
-            label: "Docs",
+            label: "Docs"
           },
           {
             to: "/blog",
             label: "Blog",
-            position: "left",
+            position: "left"
           },
           {
             href: "https://github.com/IgorNMS",
             label: "GitHub",
-            position: "right",
+            position: "right"
           },
         ],
       },
-
       footer: {
         style: "dark",
         links: [
@@ -75,7 +74,7 @@ const config = {
             items: [
               {
                 label: "Projetos",
-                to: "/docs/intro",
+                to: "docs",
               },
             ],
           },

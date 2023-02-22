@@ -7,25 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="137203d5-34ba-4ead-b983-c9b10730c8a5" name="Changes" comment="Fix: ajuste do config para deploy vercel.">
-      <change afterPath="$PROJECT_DIR$/docs/CyberOps/TorGateway-Kali.mdx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/CyberOps/_category_.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/CyberOps/img/Untitled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/CyberOps/img/image_2022-10-30_145152797.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/CyberOps/img/image_2022-10-30_152241367.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/CyberOps/img/image_2022-10-30_152415047.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/CyberOps/img/image_2022-10-30_153046322.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/MySql/_category_.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/MySql/mysql.mdx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Raspberry/_category_.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Raspberry/img/rasp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Raspberry/raspberryDisplay.mdx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/ScriptsPowerShell/AssinarScriptsWindows.mdx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/ScriptsPowerShell/_category_.json" afterDir="false" />
+    <list default="true" id="137203d5-34ba-4ead-b983-c9b10730c8a5" name="Changes" comment="Feat: novos tutoriais.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/intro.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/intro.mdx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docusaurus.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docusaurus.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HomepageFeatures/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomepageFeatures/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,25 +45,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TODO_SCOPE": "All Places",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Projects/SpecialCondition/creative-hub/docs/ScriptsPowerShell",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "ts.external.directory.path": "D:\\Projects\\SpecialCondition\\creative-hub\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/SpecialCondition/creative-hub/docs/ScriptsPowerShell&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Projects\\SpecialCondition\\creative-hub\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Projects\SpecialCondition\creative-hub\docs\ScriptsPowerShell" />
