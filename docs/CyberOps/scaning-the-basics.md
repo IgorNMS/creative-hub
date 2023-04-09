@@ -1,8 +1,8 @@
-# Scanning
+# Scanning the basics
 
 ### Banner grabbing
 
-Tecnica usada para obter informação sobre o sistema, Admin podem usar isso para criar um inventario dos sistemas e serviços rodando em uma rede porém um intruso pode usar a mesma tecnica para encontrar aplicações vulneraveis.
+Tecnica usada para obter informação sobre o sistema, O Admin podem usar isso para criar um inventario dos sistemas e serviços rodando em uma rede porém um intruso pode usar a mesma tecnica para encontrar aplicações vulneraveis.
 
 ```powershell
 Ex: echo "" | nc -v -n -w1 192.168.1.85 80
