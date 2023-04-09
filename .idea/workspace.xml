@@ -7,10 +7,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="137203d5-34ba-4ead-b983-c9b10730c8a5" name="Changes" comment="Feat: novos tutoriais.">
+    <list default="true" id="137203d5-34ba-4ead-b983-c9b10730c8a5" name="Changes" comment="Feat: novos docs e correção de alguns detalhes.">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/CyberOps/Scaning f12c7a8cd6d542eeba53b1ece27db179/Screenshot_2023-04-09-12-11-45-944-edit_com.termux.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/CyberOps/Scaning f12c7a8cd6d542eeba53b1ece27db179/Screenshot_2023-04-09-12-34-14-034-edit_com.termux.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/CyberOps/Scaning f12c7a8cd6d542eeba53b1ece27db179/Screenshot_2023-04-09-14-59-15-763-edit_com.termux.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/CyberOps/Scaning f12c7a8cd6d542eeba53b1ece27db179/Screenshot_2023-04-09-15-03-50-221-edit_com.termux.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/CyberOps/Scaning f12c7a8cd6d542eeba53b1ece27db179/Screenshot_2023-04-09-15-08-58-945-edit_com.termux.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/CyberOps/Scaning f12c7a8cd6d542eeba53b1ece27db179/Screenshot_2023-04-09-15-10-12-232-edit_com.termux.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/CyberOps/Scaning f12c7a8cd6d542eeba53b1ece27db179/Screenshot_2023-04-09-15-12-43-236-edit_com.termux.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/CyberOps/Scaning f12c7a8cd6d542eeba53b1ece27db179/Screenshot_2023-04-09-15-16-13-633-edit_com.termux.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/CyberOps/Scaning f12c7a8cd6d542eeba53b1ece27db179/Screenshot_2023-04-09-15-21-48-033-edit_com.termux.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/CyberOps/Scaning f12c7a8cd6d542eeba53b1ece27db179/Screenshot_2023-04-09-15-25-18-802-edit_com.termux.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/CyberOps/Scaning f12c7a8cd6d542eeba53b1ece27db179/Screenshot_2023-04-09-15-30-30-049-edit_com.termux.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/CyberOps/Scaning f12c7a8cd6d542eeba53b1ece27db179/Untitled 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/CyberOps/Scaning f12c7a8cd6d542eeba53b1ece27db179/Untitled 2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/CyberOps/Scaning f12c7a8cd6d542eeba53b1ece27db179/Untitled 3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/CyberOps/Scaning f12c7a8cd6d542eeba53b1ece27db179/Untitled 4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/CyberOps/Scaning f12c7a8cd6d542eeba53b1ece27db179/Untitled 5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/CyberOps/Scaning f12c7a8cd6d542eeba53b1ece27db179/Untitled 6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/CyberOps/Scaning f12c7a8cd6d542eeba53b1ece27db179/Untitled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/CyberOps/Scaning f12c7a8cd6d542eeba53b1ece27db179/nmap101.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/CyberOps/scaning-the-basics.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docusaurus.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docusaurus.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/CyberOps/TorGateway-Kali.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/CyberOps/TorGateway-Kali.mdx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,29 +65,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Projects/SpecialCondition/creative-hub/docs/ScriptsPowerShell&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\Projects\\SpecialCondition\\creative-hub\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TODO_SCOPE": "All Places",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Projects/SpecialCondition/creative-hub/docs/CyberOps",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "ts.external.directory.path": "D:\\Projects\\SpecialCondition\\creative-hub\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Projects\SpecialCondition\creative-hub\docs\ScriptsPowerShell" />
       <recent name="D:\Projects\SpecialCondition\creative-hub\docs\CyberOps" />
+      <recent name="D:\Projects\SpecialCondition\creative-hub\docs\ScriptsPowerShell" />
       <recent name="D:\Projects\SpecialCondition\creative-hub\docs\CyberOps\img" />
       <recent name="D:\Projects\SpecialCondition\creative-hub\docs\Raspberry" />
       <recent name="D:\Projects\SpecialCondition\creative-hub\blog" />
@@ -130,6 +150,9 @@
       <workItem from="1676481941599" duration="1182000" />
       <workItem from="1676832478719" duration="6060000" />
       <workItem from="1676921520144" duration="9260000" />
+      <workItem from="1679349050578" duration="1195000" />
+      <workItem from="1680463112607" duration="39000" />
+      <workItem from="1681069085137" duration="1269000" />
     </task>
     <task id="LOCAL-00001" summary="Terminando de alterar o cabecalho fixo da pagina inicial.">
       <created>1675655759923</created>
@@ -201,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676929849089</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Feat: novos tutoriais.">
+      <created>1677029819175</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1677029819175</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +245,9 @@
     <MESSAGE value="Feat: Preparando para o deploy no Github pages." />
     <MESSAGE value="Fix: ajuste do config para deploy." />
     <MESSAGE value="Fix: ajuste do config para deploy vercel." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix: ajuste do config para deploy vercel." />
+    <MESSAGE value="Feat: novos tutoriais." />
+    <MESSAGE value="Feat: novos docs e correção de alguns detalhes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Feat: novos docs e correção de alguns detalhes." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
