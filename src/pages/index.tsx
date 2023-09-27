@@ -6,6 +6,7 @@ import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import styles from "./index.module.css";
 import Background from "@site/src/components/Background";
+import { Analytics } from '@vercel/analytics/react';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -38,6 +39,7 @@ export default function Home() {
       title={siteConfig.title}
       description={siteConfig.tagline}
     >
+      <Analytics/>
       <HomepageHeader />
       <main>
         <HomepageFeatures />

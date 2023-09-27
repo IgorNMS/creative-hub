@@ -1,20 +1,11 @@
 import React from "react";
-import styles from "./background.module.css"
-import { sql } from "@vercel/postgres"
+import styles from "./background.module.css";
 
 type BackgroundProps = {
     children: React.ReactNode;
 }
 
-async function getSql() {
-    console.log("teste")
-    const { rows } = await sql`SELECT * FROM teste;`;
-    console.log(rows);
-    return rows;
-}
-
 export default function Background(props: BackgroundProps) {
-    getSql();
     return (
         <div className={styles.generalContainer}>
             <div className={styles.containerChildren}>
