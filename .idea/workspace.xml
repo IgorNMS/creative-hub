@@ -8,12 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="137203d5-34ba-4ead-b983-c9b10730c8a5" name="Changes" comment="Feat: Atualizando as libs.">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Background/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Background/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CEO/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CEO/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +32,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "IgorNMS"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;IgorNMS&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -77,7 +72,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "ts.external.directory.path": "C:\\Users\\nasci\\AppData\\Local\\JetBrains\\Toolbox\\apps\\WebStorm\\ch-0\\232.9921.42\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "ts.external.directory.path": "C:\\Users\\nasci\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -124,8 +119,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.docusaurus" />
         <item itemvalue="npm.deploy" />
         <item itemvalue="npm.docusaurus" />
+        <item itemvalue="npm.deploy" />
+        <item itemvalue="npm.deploy" />
       </list>
     </recent_temporary>
   </component>
