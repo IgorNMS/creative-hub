@@ -9,6 +9,10 @@
   <component name="ChangeListManager">
     <list default="true" id="137203d5-34ba-4ead-b983-c9b10730c8a5" name="Changes" comment="Feat: usando variaveis de ambiente para conectar na api.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docusaurus.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docusaurus.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CEO/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CEO/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +156,7 @@
       <workItem from="1681069085137" duration="2271000" />
       <workItem from="1703539405482" duration="112000" />
       <workItem from="1703539551468" duration="581000" />
-      <workItem from="1703540151076" duration="4490000" />
+      <workItem from="1703540151076" duration="5721000" />
     </task>
     <task id="LOCAL-00001" summary="Terminando de alterar o cabecalho fixo da pagina inicial.">
       <created>1675655759923</created>
@@ -309,7 +313,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703544044149</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Feat: usando variaveis de ambiente para conectar na api.">
+      <option name="closed" value="true" />
+      <created>1703545784781</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1703545784782</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

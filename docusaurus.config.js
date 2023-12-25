@@ -1,4 +1,6 @@
 // @ts-check
+import 'dotenv/config';
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Creative Hub",
@@ -9,6 +11,10 @@ const config = {
   organizationName: "IgorNMS",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
+  customFields:{
+    secToken: process.env.SEC_TOKEN,
+    apiLink: process.env.API_LINK
+  },
   plugins: [
       'docusaurus2-dotenv'
   ],
