@@ -9,11 +9,13 @@ const config = {
   organizationName: "IgorNMS",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
+  plugins: [
+      'docusaurus2-dotenv'
+  ],
   i18n: {
     defaultLocale: "pt-br",
     locales: ["pt-br"],
   },
-
   presets: [
     [
       "classic",
@@ -31,7 +33,6 @@ const config = {
       }),
     ],
   ],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -115,4 +116,4 @@ const config = {
     }),
 };
 
-module.exports = config;
+export default config;

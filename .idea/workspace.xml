@@ -7,9 +7,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="137203d5-34ba-4ead-b983-c9b10730c8a5" name="Changes" comment="Feat: Alterando chave de API.">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="137203d5-34ba-4ead-b983-c9b10730c8a5" name="Changes" comment="Feat: usando variaveis de ambiente para conectar na api.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/MySql/mysql.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/MySql/mysql.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docusaurus.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docusaurus.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CEO/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CEO/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +81,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
+    "npm.start.executor": "Run",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "ts.external.directory.path": "D:\\Projects\\SpecialCondition\\creative-hub\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
@@ -152,7 +158,7 @@
       <workItem from="1681069085137" duration="2271000" />
       <workItem from="1703539405482" duration="112000" />
       <workItem from="1703539551468" duration="581000" />
-      <workItem from="1703540151076" duration="28000" />
+      <workItem from="1703540151076" duration="3805000" />
     </task>
     <task id="LOCAL-00001" summary="Terminando de alterar o cabecalho fixo da pagina inicial.">
       <created>1675655759923</created>
@@ -285,7 +291,23 @@
       <option name="project" value="LOCAL" />
       <updated>1703540101672</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Feat: Alterando chave de API.">
+      <option name="closed" value="true" />
+      <created>1703540187019</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1703540187019</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Feat: Alterando chave de API.">
+      <option name="closed" value="true" />
+      <created>1703540212539</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1703540212539</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +327,8 @@
     <MESSAGE value="Feat: Atualizando as libs." />
     <MESSAGE value="Feat: Adicionando CEO." />
     <MESSAGE value="Feat: Alterando chave de API." />
-    <option name="LAST_COMMIT_MESSAGE" value="Feat: Alterando chave de API." />
+    <MESSAGE value="Feat: usando variaveis de ambiente para conectar na api." />
+    <option name="LAST_COMMIT_MESSAGE" value="Feat: usando variaveis de ambiente para conectar na api." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
