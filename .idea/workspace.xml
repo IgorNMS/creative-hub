@@ -7,10 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="137203d5-34ba-4ead-b983-c9b10730c8a5" name="Changes" comment="Feat: Adicionando CEO.">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="137203d5-34ba-4ead-b983-c9b10730c8a5" name="Changes" comment="Feat: Alterando chave de API.">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +150,7 @@
       <workItem from="1680463112607" duration="39000" />
       <workItem from="1681069085137" duration="2271000" />
       <workItem from="1703539405482" duration="112000" />
-      <workItem from="1703539551468" duration="397000" />
+      <workItem from="1703539551468" duration="541000" />
     </task>
     <task id="LOCAL-00001" summary="Terminando de alterar o cabecalho fixo da pagina inicial.">
       <created>1675655759923</created>
@@ -269,7 +267,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696092493928</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Feat: Alterando chave de API.">
+      <option name="closed" value="true" />
+      <created>1703539993362</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1703539993362</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,7 +294,8 @@
     <MESSAGE value="Fix: pequenas correções." />
     <MESSAGE value="Feat: Atualizando as libs." />
     <MESSAGE value="Feat: Adicionando CEO." />
-    <option name="LAST_COMMIT_MESSAGE" value="Feat: Adicionando CEO." />
+    <MESSAGE value="Feat: Alterando chave de API." />
+    <option name="LAST_COMMIT_MESSAGE" value="Feat: Alterando chave de API." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
