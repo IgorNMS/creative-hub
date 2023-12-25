@@ -8,9 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="137203d5-34ba-4ead-b983-c9b10730c8a5" name="Changes" comment="Feat: Adicionando CEO.">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CEO/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CEO/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +51,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2LLKSpmUrXgsXK2aXxM8xh0n3O8" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -66,7 +69,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "TODO_SCOPE": "All Places",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Projects/SpecialCondition/creative-hub/docs/CyberOps",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/Projects/Random/IpApi",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -74,7 +78,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "ts.external.directory.path": "C:\\Users\\nasci\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "ts.external.directory.path": "D:\\Projects\\SpecialCondition\\creative-hub\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -123,9 +127,6 @@
       <list>
         <item itemvalue="npm.docusaurus" />
         <item itemvalue="npm.deploy" />
-        <item itemvalue="npm.docusaurus" />
-        <item itemvalue="npm.deploy" />
-        <item itemvalue="npm.deploy" />
       </list>
     </recent_temporary>
   </component>
@@ -150,6 +151,8 @@
       <workItem from="1679349050578" duration="1195000" />
       <workItem from="1680463112607" duration="39000" />
       <workItem from="1681069085137" duration="2271000" />
+      <workItem from="1703539405482" duration="112000" />
+      <workItem from="1703539551468" duration="397000" />
     </task>
     <task id="LOCAL-00001" summary="Terminando de alterar o cabecalho fixo da pagina inicial.">
       <created>1675655759923</created>
@@ -258,7 +261,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696092456539</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Feat: Adicionando CEO.">
+      <option name="closed" value="true" />
+      <created>1696092493928</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1696092493928</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
