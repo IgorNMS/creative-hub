@@ -1,0 +1,21 @@
+# Como rodar um LLM simples em um RaspberryPi 3.
+
+O Raspberry e uma plataforma bem limitada quando o assunto e processamento de LLMs, mas e bem simples fazer um LLM rodar num RaspberryPi 3...
+
+Este tutorial tem como o objetivo documentar os passos que eu dei para fazer o Raspberry rodar esse LLM...
+
+## Comandos
+
+1° Faça as atualizações e configurações necessarias no Raspberry...
+
+2° Use o comando:
+
+    `curl -fsSL https://ollama.com/install.sh | sh`
+
+    Esse comando, ira baixar e instalar todos os componentes necessarios para o ollama ser executado no RaspPi
+
+3° Use o comando:
+
+    `ollama run tinyllama`
+
+    Esse comando ira fazer o ollama baixar o LLM tinyllama e executa ele no terminal
