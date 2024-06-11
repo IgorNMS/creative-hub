@@ -1,0 +1,39 @@
+h8mail is a tool for finding compromised email addresses and passwords from these data breaches. When you combine this tool with others such as **TheHarvester** or the **crosslinked** tool, you can harvest email addresses from an organization and then test to see if they have been compromised.
+
+Python3 with pip package manager is mandatory.
+
+1° Step install h8mail with pip3
+
+    ``` pip3 install h8mail ```
+
+2° Step h8mail help
+
+    Lets look at the h8mail help screen.
+    The binaries of h8mail is at user directory.
+    Linux example: ```kali > cd /home/kali/.local/bin ```
+    next ```kali > python3 h8mail -h ```
+
+The simplest command is : `python3 h8mail -t <target email address>`
+
+3° Step acquire and install API Keys
+
+    We need to create a config file and provide API keys to the databases we want to search, to create a config file, enter:
+
+    ```kali>python3 h8mail -g```
+
+    Now we have the option to use API keys from premium services such as haveibeenpwned.com
+    Get the API Keys and place in the config file:
+
+    ```nano {path to the config file/h8mail_config.ini}```
+
+    Now we are ready to begin!
+
+4° Step Search for email address in dumps
+
+    h8mail’s syntax is rather simple for simple searches. We only need to use the -t option followed by the target email address to search the dumps for this email followed by the -c option and the location of your config file, such as:
+
+    ```kali > python3 ./h8mail -t linda.vu@gmail.com -c /home/kali/.local/bin/h8mail_config.ini```
+
+    If we want to save the results in a text file, we can use the -o option followed the name of file we want the results saved to.
+
+    ```kali > python3 ./h8mail -t** [**linda.vu@gmail.com**](mailto:linda.vu@gmail.com) **-c /home/kali/.local/bin/h8mail_config.ini -o linda_results.txt```
