@@ -1,6 +1,5 @@
 import React from "react";
 import clsx from "clsx";
-import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
@@ -8,27 +7,28 @@ import styles from "./index.module.css";
 import Background from "@site/src/components/Background";
 import {Analytics} from '@vercel/analytics/react';
 import CEO from "../components/CEO";
+import Link from "@docusaurus/Link";
+import Translate, {translate} from '@docusaurus/Translate';
 
 function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
   void CEO();
   return (
       <header className={clsx("hero hero--black", styles.heroBanner)}>
         <Background>
           <div className="container">
-            <h1 className="hero__title">{siteConfig.title}</h1>
+            <h3 className="hero__title"><Translate description="The homepage to present myself">Quem sou eu?</Translate></h3>
             <p className="hero__subtitle">
-              Confira meus projetos.
+            <Translate>Um dev Fullstack | .NET & Next.js | APIs escaláveis, microsserviços e CI/CD com Azure DevOps</Translate>
             </p>
-            <div className={styles.buttons}>
-              <Link
-                  className="button button--secondary button--lg"
-                  to="docs"
-              >
-                Confira! 👁
-              </Link>
-            </div>
           </div>
+            <div className={styles.buttons}>
+                <Link
+                    className="button button--secondary button--lg"
+                    to="docs"
+                >
+                  <Translate>Confira meus projetos!!</Translate>
+                </Link>
+              </div>
         </Background>
       </header>
   );

@@ -1,0 +1,38 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.CyberOps": {
+    "message": "CyberOps",
+    "description": "The label for category CyberOps in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.CyberOps.link.generated-index.description": {
+    "message": "Documentação relacionada a meu hobby na area de cyber segurança e red team!",
+    "description": "The generated-index page description for category CyberOps in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.MySql": {
+    "message": "MySql",
+    "description": "The label for category MySql in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.MySql.link.generated-index.description": {
+    "message": "Alguns docs do MySQL que uso como referencia em caso de duvidas",
+    "description": "The generated-index page description for category MySql in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Raspberry": {
+    "message": "Raspberry",
+    "description": "The label for category Raspberry in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Raspberry.link.generated-index.description": {
+    "message": "Projetos com meu Raspberry Pi 3+",
+    "description": "The generated-index page description for category Raspberry in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.PowerShell Tutorials": {
+    "message": "PowerShell Tutorials",
+    "description": "The label for category PowerShell Tutorials in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.PowerShell Tutorials.link.generated-index.description": {
+    "message": "Alguns tutoriais relacionado ao PowerShell do Windows",
+    "description": "The generated-index page description for category PowerShell Tutorials in sidebar tutorialSidebar"
+  }
+}

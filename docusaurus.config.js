@@ -1,5 +1,6 @@
 // @ts-check
 import 'dotenv/config';
+import tailwindPlugin from "./plugins/tailwind-config.cjs";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -16,11 +17,29 @@ const config = {
     apiLink: process.env.API_LINK
   },
   plugins: [
-      'docusaurus2-dotenv'
+      'docusaurus2-dotenv',
+      tailwindPlugin
   ],
   i18n: {
-    defaultLocale: "pt-br",
-    locales: ["pt-br"],
+    defaultLocale: "br",
+    locales: ["br", "en"],
+    path: 'i18n',
+    localeConfigs: {
+      br:{
+        label:'Brasileiro',
+        direction: 'ltr',
+        htmlLang: 'pt-BR',
+        calendar: 'gregory',
+        path: 'br'
+      },
+      en:{
+        label: 'English',
+        direction: 'ltr',
+        htmlLang: 'en-US',
+        calendar: 'gregory',
+        path: 'en',
+      }
+    }
   },
   presets: [
     [
@@ -68,6 +87,10 @@ const config = {
             label: "GitHub",
             position: "right"
           },
+          {
+            type: 'localeDropdown',
+            position: 'left',
+          }
         ],
       },
       footer: {
