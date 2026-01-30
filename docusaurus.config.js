@@ -1,5 +1,5 @@
 // @ts-check
-import 'dotenv/config';
+import "dotenv/config";
 import tailwindPlugin from "./plugins/tailwind-config.cjs";
 
 /** @type {import('@docusaurus/types').Config} */
@@ -12,35 +12,11 @@ const config = {
   organizationName: "IgorNMS",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  customFields:{
+  customFields: {
     secToken: process.env.SEC_TOKEN,
-    apiLink: process.env.API_LINK
+    apiLink: process.env.API_LINK,
   },
-  plugins: [
-      'docusaurus2-dotenv',
-      tailwindPlugin
-  ],
-  i18n: {
-    defaultLocale: "br",
-    locales: ["br", "en"],
-    path: 'i18n',
-    localeConfigs: {
-      br:{
-        label:'Brasileiro',
-        direction: 'ltr',
-        htmlLang: 'pt-BR',
-        calendar: 'gregory',
-        path: 'br'
-      },
-      en:{
-        label: 'English',
-        direction: 'ltr',
-        htmlLang: 'en-US',
-        calendar: 'gregory',
-        path: 'en',
-      }
-    }
-  },
+  plugins: ["docusaurus2-dotenv", tailwindPlugin],
   presets: [
     [
       "classic",
@@ -68,29 +44,25 @@ const config = {
           alt: "Logo",
           src: "img/logo.webp",
           width: "32px",
-          height: "50px"
+          height: "50px",
         },
         items: [
           {
             type: "doc",
             docId: "intro",
             position: "left",
-            label: "Docs"
+            label: "Docs",
           },
           {
             to: "/blog",
             label: "Blog",
-            position: "left"
+            position: "left",
           },
           {
             href: "https://github.com/IgorNMS",
             label: "GitHub",
-            position: "right"
+            position: "right",
           },
-          {
-            type: 'localeDropdown',
-            position: 'left',
-          }
         ],
       },
       footer: {
