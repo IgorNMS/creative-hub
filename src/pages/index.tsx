@@ -11,7 +11,7 @@ import Link from "@docusaurus/Link";
 import Translate, { translate } from "@docusaurus/Translate";
 
 function HomepageHeader() {
-  //void CEO();
+  void CEO();
   return (
     <header className={clsx("hero hero--black", styles.heroBanner)}>
       <Background>
