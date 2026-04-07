@@ -11,7 +11,11 @@ const config = {
   baseUrl: "/",
   organizationName: "IgorNMS",
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    },
+  },
   customFields: {
     secToken: process.env.SEC_TOKEN,
     apiLink: process.env.API_LINK,

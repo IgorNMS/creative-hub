@@ -1,122 +1,75 @@
 import React from "react";
 import clsx from "clsx";
 import styles from "./styles.module.css";
-import { Box } from "@mui/material";
 
 type FeatureItem = {
   title: string;
-  description: JSX.Element;
+  icon: string;
+  description: string[];
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "QUEM SOU EU?",
-    description: (
-      <>
-        <div>
-          Sou Igor Nascimento, desenvolvedor fullstack com 4+ anos de
-          experiência profissional, especializado em .NET (C#) no backend e
-          React/Next.js no frontend.
-          <br />
-          Possuo forte atuação em ambientes de alta demanda, com foco em
-          construção de APIs RESTful, microsserviços escaláveis, mensageria
-          assíncrona (RabbitMQ) e arquiteturas orientadas a eventos.
-          <br />
-          Domino práticas modernas de desenvolvimento como CI/CD, versionamento
-          semântico, integração contínua, testes automatizados e monitoramento
-          com ferramentas como Application Insights e Serilog.
-        </div>
-      </>
-    ),
+    title: "Quem sou eu?",
+    icon: "",
+    description: [
+      "Desenvolvedor fullstack com 6+ anos de experiência, especializado em .NET (C#) e React/Next.js",
+      "Forte atuação em APIs RESTful, microsserviços escaláveis e mensageria assíncrona (RabbitMQ)",
+      "Experiência com CI/CD, versionamento semântico, testes automatizados e observabilidade com Application Insights e Serilog",
+    ],
   },
   {
-    title: "MINHAS EXPERIENCIAS:",
-    description: (
-      <>
-        <div>
-          <p>
-            Desenvolvi e mantive aplicações baseadas em .NET Core/.NET 6+, com
-            foco em performance e desacoplamento.
-            <br />
-            Implementei microsserviços com integração a bancos relacionais (SQL
-            Server, MySQL) e NoSQL (MongoDB, Redis).
-            <br />
-            Atuei na criação de interfaces web com React + Next.js, focando em
-            renderização SSR e experiência do usuário.
-            <br />
-            Utilizei RabbitMQ para orquestração de eventos e comunicações
-            assíncronas entre serviços.
-            <br />
-            Automatizei pipelines de build e deploy usando Azure DevOps, com
-            versionamento de pacotes via NuGet e deploy em containers com Docker
-            e Docker Compose.
-            <br />
-            Escrevi testes unitários e de integração com xUnit, NUnit e
-            ferramentas de mocking.
-            <br />
-            Participei ativamente da definição de arquitetura e refatorações com
-            foco em clean code, SOLID e DDD.
-          </p>
-        </div>
-      </>
-    ),
+    title: "Minhas Experiências",
+    icon: "",
+    description: [
+      "Aplicações .NET Core/.NET 6+ com foco em performance e desacoplamento",
+      "Microsserviços integrados a SQL Server, MySQL, MongoDB e Redis",
+      "Interfaces web com React + Next.js focando em SSR e UX",
+      "Orquestração de eventos com RabbitMQ entre serviços",
+      "Pipelines CI/CD com Azure DevOps, Docker e Docker Compose",
+      "Testes unitários e de integração com xUnit, NUnit e mocking",
+      "Arquitetura com foco em Clean Code, SOLID e DDD",
+    ],
   },
   {
-    title: "O QUE FAÇO ATUALMENTE:",
-    description: (
-      <>
-        <div>
-          <p>
-            Desenvolvo aplicações backend com .NET 6/7/8, seguindo princípios de
-            arquitetura limpa e com foco em escalabilidade horizontal.
-            <br />
-            Crio frontends utilizando Next.js, com TypeScript, Tailwind CSS e
-            consumo eficiente de APIs.
-            <br />
-            Integro soluções com sistemas externos via REST e mensageria, além
-            de trabalhar com autenticação e autorização (OAuth 2.0, JWT).
-            <br />
-            Participo da automação de pipelines, com foco em deploys contínuos,
-            testes automatizados e observabilidade.
-            <br />
-            Estou constantemente estudando temas como arquitetura hexagonal,
-            containers, performance e boas práticas de engenharia de software.
-          </p>
-        </div>
-      </>
-    ),
+    title: "O que faço atualmente",
+    icon: "",
+    description: [
+      "Backend com .NET 6/7/8, arquitetura limpa e escalabilidade horizontal",
+      "Frontends com Next.js, TypeScript e Tailwind CSS",
+      "Integrações via REST, mensageria, OAuth 2.0 e JWT",
+      "Automação de pipelines com foco em deploys contínuos e observabilidade",
+      "Estudando arquitetura hexagonal, containers e performance",
+    ],
   },
 ];
 
-function Feature({ title, description }: FeatureItem) {
+function Feature({ title, icon, description }: FeatureItem) {
   return (
-    <div className={clsx("col")}>
-      <Box
-        sx={{
-          border: 2,
-          borderColor: "#242538",
-          borderRadius: "10px",
-          p: "10px",
-          m: "5px",
-        }}
-      >
-        <h3 className={styles.title}>{title}</h3>
-        <div className={styles.description}>{description}</div>
-      </Box>
+    <div className={styles.card}>
+      <div className={styles.cardHeader}>
+        <span className={styles.cardIcon}>{icon}</span>
+        <h3 className={styles.cardTitle}>{title}</h3>
+      </div>
+      <ul className={styles.cardList}>
+        {description.map((item, idx) => (
+          <li key={idx} className={styles.cardListItem}>
+            {item}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
 
 export default function HomepageFeatures(): JSX.Element {
   return (
-    <section>
-      <div>
-        <div className={styles.modContainer}>
-          <div className={styles.resume}>
-            {FeatureList.map((props, idx) => (
-              <Feature key={idx} {...props} />
-            ))}
-          </div>
+    <section className={styles.section}>
+      <div className={styles.container}>
+        <div className={styles.grid}>
+          {FeatureList.map((props, idx) => (
+            <Feature key={idx} {...props} />
+          ))}
         </div>
       </div>
     </section>
