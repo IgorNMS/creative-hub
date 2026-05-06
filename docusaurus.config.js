@@ -19,6 +19,7 @@ const config = {
   customFields: {
     secToken: process.env.SEC_TOKEN,
     apiLink: process.env.API_LINK,
+    linkRedirect: process.env.LINK_REDIRECT,
   },
   plugins: ["docusaurus2-dotenv", tailwindPlugin],
   presets: [
