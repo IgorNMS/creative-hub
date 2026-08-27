@@ -1,0 +1,163 @@
+# OpenCode + Obsidian
+
+Link oficial de instalação: [opencode.ai/go](https://opencode.ai/go?ref=VYTCTSPMC9)
+
+Bom, para integrar o OpenCode com o Obsidian no Windows/Linux, precisamos de alguns pré-requisitos.
+
+No Linux precisamos de um terminal moderno como:
+
+- [WezTerm](https://wezterm.org), cross-platform
+- [Alacritty](https://alacritty.org), cross-platform
+- [Ghostty](https://ghostty.org), Linux and macOS
+- [Kitty](https://sw.kovidgoyal.net/kitty/), Linux and macOS
+
+E uma chave API para integrar com a LLM que quiser usar (como ChatGPT e etc...)
+
+## Instalação no Linux
+
+A forma mais fácil de instalar o OpenCode é pelo comando:
+
+```bash
+curl -fsSL https://opencode.ai/install | bash
+```
+
+Você também pode instalar usando um desses comandos:
+
+```bash
+npm install -g opencode-ai
+bun install -g opencode-ai
+pnpm install -g opencode-ai
+yarn global add opencode-ai
+```
+
+Usando Homebrew no macOS e Linux:
+
+```bash
+brew install anomalyco/tap/opencode
+```
+
+Instalando em distribuições baseadas em Arch Linux:
+
+```bash
+sudo pacman -S opencode           # Arch Linux (Stable)
+paru -S opencode-bin              # Arch Linux (Latest from AUR)
+```
+
+## Instalação no Windows
+
+No Windows é recomendado o uso do WSL. Suporte via Bun no Windows ainda está em desenvolvimento pela equipe do OpenCode, então os métodos abaixo são os oficialmente suportados no momento.
+
+No Windows você pode usar um desses comandos para instalar:
+
+```powershell
+choco install opencode
+scoop install opencode
+npm install -g opencode-ai
+mise use -g github:anomalyco/opencode
+```
+
+Também é possível baixar o binário direto na página de Releases do projeto, ou usar a imagem Docker oficial, se preferir isolar a instalação em container.
+
+## Configuração inicial
+
+Basta executar o comando `opencode` para abrir a interface do terminal (TUI). Na primeira execução, use o comando `/connect` dentro da TUI:
+Para conseguir uma chave com disconto pode usar o meu link: [opencode.ai](https://opencode.ai/go?ref=VYTCTSPMC9)
+
+1. Selecione o provedor **opencode** (ou outro de sua preferência, como OpenAI/ChatGPT, Anthropic, etc).
+2. Você será direcionado para `opencode.ai/auth` para fazer login e copiar sua chave de API.
+3. Cole a chave de volta na TUI.
+
+Se preferir configurar outro provedor de LLM diretamente (sem passar pelo OpenCode Zen), use:
+
+```bash
+opencode auth login
+```
+
+Isso te dá acesso a qualquer provedor listado em [models.dev](https://models.dev), com a chave salva localmente em `~/.local/share/opencode/auth.json`.
+
+## Iniciando um projeto com o vault do Obsidian
+
+Para usar o OpenCode sobre o seu vault, navegue até a pasta do vault e inicialize o projeto:
+
+```bash
+cd /caminho/para/seu-vault
+opencode
+```
+
+Dentro da TUI, rode:
+
+```
+/init
+```
+
+Isso faz o OpenCode analisar a estrutura de arquivos do vault e gerar um `AGENTS.md` na raiz, documentando os padrões que ele deve seguir ao ler e editar suas notas.
+
+Nesse ponto, o OpenCode já consegue ler e escrever arquivos markdown do vault normalmente, como faria em qualquer projeto de código — mas para ter acesso *operacional* real ao Obsidian (busca por índice, escrita segura, leitura de metadados), o caminho recomendado é conectar via MCP.
+
+## O caminho recomendado e usar o MCP, mas não e estritamente necessario.!!!!!
+
+A partir do comando para iniciar /init, o opencode ja consegue ler todos os seus arquivos do obsidian.
+
+### Passo 1 — plugin Local REST API no Obsidian
+
+Dentro do Obsidian, vá em **Settings → Community plugins → Browse**, procure por **Local REST API** (autor: `coddingtonbear`) e instale. Ative o plugin na lista de community plugins.
+
+Abra o painel de configurações do plugin (**Settings → Local REST API**) e copie a **API key** gerada ali — você vai usá-la no próximo passo. Por padrão, o plugin expõe o vault em `https://127.0.0.1:27124` (HTTPS com certificado autoassinado).
+
+O plugin só serve requisições enquanto o Obsidian estiver aberto com ele ativado — não existe um daemon separado rodando em segundo plano.
+
+### Passo 2 — servidor MCP (mcp-obsidian)
+
+O servidor MCP mais usado para essa integração é o `mcp-obsidian`, rodado via `uvx` (requer o `uv` instalado — `curl -LsSf https://astral.sh/uv/install.sh | sh` no Linux).
+
+Edite o arquivo de configuração do OpenCode, geralmente em `~/.config/opencode/config.json` (confirme o caminho exato com `opencode config print`), e adicione:
+
+```json
+{
+  "mcp": {
+    "obsidian": {
+      "type": "local",
+      "command": ["uvx", "mcp-obsidian"],
+      "env": {
+        "OBSIDIAN_API_KEY": "sua-chave-aqui",
+        "OBSIDIAN_HOST": "127.0.0.1",
+        "OBSIDIAN_PORT": "27124"
+      }
+    }
+  }
+}
+```
+
+Alternativamente, use o assistente interativo:
+
+```bash
+opencode mcp add
+```
+
+Reinicie o OpenCode e confirme que o servidor foi registrado:
+
+```bash
+opencode mcp list
+```
+
+Com o Obsidian aberto e o plugin ativo, o OpenCode passa a ter acesso a sete ferramentas sobre o vault: `list_files_in_vault`, `list_files_in_dir`, `get_file_contents`, `search`, `patch_content`, `append_content` e `delete_file`.
+
+### Testando a integração
+
+Com o vault carregado no Obsidian, rode dentro da TUI do OpenCode:
+
+```
+Busque nas minhas notas tudo que eu escrevi sobre [assunto] e resuma os pontos principais.
+```
+
+Se a integração estiver correta, o agente chama `search`, lê os arquivos mais relevantes com `get_file_contents` e devolve a síntese citando os títulos das notas.
+
+## Notas de segurança
+
+O plugin Local REST API dá acesso de leitura e escrita completo ao vault ativo. Por padrão ele já vem restrito a `127.0.0.1` (sem exposição externa), mas vale reforçar:
+
+- Nunca versione a API key em repositórios (git-ignore o `config.json` ou use variáveis de ambiente).
+- Configure aprovação manual para a ferramenta `delete_file` no OpenCode.
+- Não exponha a porta publicamente — se precisar de acesso remoto, use um túnel SSH ou Tailscale em vez de abrir a porta direto na rede.
+
+Com esses passos, você tem um vault do Obsidian totalmente operável por um agente de IA local, sem depender de nenhum serviço de nuvem para armazenar suas notas.
